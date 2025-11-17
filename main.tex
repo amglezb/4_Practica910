@@ -28,7 +28,46 @@ El objetivo principal de esta práctica es generar un reporte técnico que descr
 
 \section{Marco Teórico}
 
-\subsection{}
+\subsection{Abstracción}
+La abstracción es un principio fundamental de la POO que consiste en enfocarse en las características esenciales de un objeto, descartando la información que no es relevante en un contexto particular, para así gestionar la complejidad del sistema. Permite a los desarrolladores construir sistemas complejos de manera más sencilla y organizada, ofreciendo una representación simplificada de la realidad o de un concepto subyacente \cite{ecosistemabuap2023poo}.
+
+\subsection{Encapsulamiento}
+El encapsulamiento se refiere a la práctica de agrupar los datos (atributos) y los métodos (comportamientos) que operan sobre esos datos en una única unidad, conocida como clase. Además, permite limitar el acceso directo a los datos (protección de datos), ocultando los detalles de implementación interna de un objeto y exponiendo solo la información necesaria a través de interfaces públicas (métodos), lo que protege la integridad de los datos y facilita la mantenibilidad del código \cite{ferestrepoca2023poo}.
+
+\subsection{Herencia}
+La herencia es un mecanismo de la POO que posibilita la creación de nuevas clases (subclases o clases hijas) a partir de clases existentes (superclases o clases padres). La subclase hereda automáticamente los atributos y métodos de su superclase, permitiendo la reutilización de código, la especialización de objetos y la definición de una jerarquía entre clases \cite{coderslink2023poo}.
+
+\subsection{Polimorfismo}
+El polimorfismo es la habilidad de un objeto de tomar diferentes formas o de realizar una acción de diferentes maneras, dependiendo del contexto o del objeto específico. Permite que comportamientos diferentes, asociados a objetos distintos, compartan el mismo nombre, logrando flexibilidad y compatibilidad de objetos en el diseño de software. Se implementa comúnmente mediante la sobrecarga y la sobrescritura de métodos \cite{openwebinars2023java}.
+
+\subsection{Dart}
+Dart es un lenguaje de programación moderno, de código abierto y orientado a objetos desarrollado por Google. Es un lenguaje puramente orientado a objetos, basado en clases, diseñado con un enfoque en la facilidad de uso y la familiaridad para la mayoría de los programadores. Es conocido por ser un lenguaje optimizado para el cliente, lo que lo hace ideal para la creación de aplicaciones multiplataforma. Las aplicaciones Dart se ejecutan utilizando la Máquina Virtual Dart, que permite la compilación Just-In-Time (JIT) para desarrollo y la compilación Ahead-Of-Time (AOT) para producción \cite{creapolis2023dart}.
+
+\subsection{Flutter}
+Flutter es un kit de desarrollo de software (SDK) de interfaz de usuario (UI) de código abierto creado por Google. Se utiliza para desarrollar aplicaciones multiplataforma para sistemas operativos como Android, iOS, Windows, Mac, Linux y la web, utilizando una única base de código. Flutter se basa en el lenguaje Dart y emplea un framework reactivo moderno con un extenso conjunto de widgets de diseño específico que permiten crear una UI consistente y de alto rendimiento. Su motor de renderizado, escrito en C++, utiliza la biblioteca gráfica Skia de Google para el renderizado de bajo nivel \cite{dart2025exceptions}.
+
+\subsection{Manejo de Excepciones}
+El manejo de excepciones es un mecanismo que permite gestionar errores y situaciones excepcionales de manera controlada durante la ejecución de un programa. En Dart, todas las excepciones derivan de la clase \texttt{Exception} y se utilizan para separar el flujo normal del programa del manejo de condiciones de error, mejorando así la robustez y mantenibilidad del software \cite{dart2025exceptions}.
+
+\subsection{Diagramas UML}
+El Lenguaje Unificado de Modelado (UML) es un estándar para visualizar, especificar, construir y documentar artefactos de sistemas de software \cite{fowler2004uml}.
+
+\subsubsection{Diagrama UML Estático}
+El diagrama de clases representa la estructura del sistema, mostrando:
+\begin{itemize}
+    \item Interfaz \texttt{ServicioTaller} con métodos abstractos
+    \item Clase abstracta \texttt{Vehiculo} que implementa la interfaz
+    \item Clases concretas: \texttt{Auto}, \texttt{Moto}, \texttt{Camión}
+    \item Relaciones de herencia y realización
+\end{itemize}
+
+\subsubsection{Diagrama UML Dinámico}
+El diagrama de secuencia muestra las interacciones temporales durante el registro de vehículos, incluyendo:
+\begin{itemize}
+    \item Flujo normal de creación de objetos
+    \item Propagación y captura de excepciones
+    \item Validaciones en setters y constructores
+\end{itemize}
 
 \section{Desarrollo}
 
