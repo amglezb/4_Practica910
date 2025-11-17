@@ -1,0 +1,100 @@
+\documentclass[doublespacing,12pt,oneside]{article}
+\usepackage[top=2.5cm, left=2.5cm, right=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage{imakeidx}
+\usepackage{biblatex}
+\usepackage{float}
+\addbibresource{bib/protocolo.bib}
+\addbibresource{biblio.bib}
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+\begin{document}
+\tableofcontents
+
+\section{Introducción}
+
+\subsection{Planteamiento del Problema}
+En esta práctica se aborda el análisis y representación estructural y dinámica de una aplicación desarrollada en Dart, con énfasis en la elaboración de diagramas UML y en la interpretación del manejo de excepciones implementando en el código base proporcionado. El problema central consiste en comprender la arquitectura del programa, identificar las relaciones entre las clases, describir el flujo de ejecución y explicar el papel que desempeña el control de errores dentro de la solución.
+
+\subsection{Motivación}
+La necesidad de resolver este problema radica en que la programación orientada a objetos exige no solo la correcta implementación del código, sino también la capacidad de modelar y documentar los componentes del sistema de manera clara. La representación UML facilita la lectura, el mantenimiento y la escalabilidad del software, mientras que el análisis del manejo de excepciones permite evaluar la solidez y robustez de la aplicación frente a condiciones inesperadas. 
+
+\subsection{Objetivos}
+El objetivo principal de esta práctica es generar un reporte técnico que describa la estructura del programa mediante un diagrama UML estático, ilustre su comportamiento mediante un diagrama UML dinámico e interprete los conceptos teóricos aplicados, destacando el mecanismo de excepciones empleado en la solución. Con ello se busca consolidar la habilidad de analizar, modelar y documentar software conforme a los lineamientos establecidos para la elaboración de reportes académicos.
+
+\section{Marco Teórico}
+
+\subsection{}
+
+\section{Desarrollo}
+
+
+\subsection{Análisis del Código}
+
+\subsubsection{Interpretación del Concepto de Excepciones}
+
+Las excepciones en el programa sirven para manejar situaciones que no estaban planeadas y que pueden provocar que el código falle de manera inesperada. En términos simples, una excepción es como una señal que avisa que algo salió mal y que el programa necesita una forma especial de responder para no detenerse por completo.
+
+En el código analizado, las excepciones ayudan a mantener ordenada la lógica, porque separan lo que hace el programa normalmente de lo que debe hacer cuando ocurre un error. Esto evita estar comprobando manualmente cada posible fallo, ya que el propio lenguaje detecta el problema y permite reaccionar de inmediato.
+
+El uso de bloques como \texttt{try--catch} demuestra que el programa está preparado para enfrentar errores. Cuando algo no funciona —por ejemplo, un dato inválido o una operación incorrecta— el \texttt{catch} permite que el programa siga funcionando sin cerrarse y muestra un mensaje o realiza otra acción que ayude a manejar la situación.
+
+Además, trabajar con excepciones hace más fácil encontrar de dónde viene el error y corregirlo después, porque el manejo está más organizado y centralizado. En general, este mecanismo hace que el programa sea más estable, más claro y capaz de recuperarse cuando ocurre algo inesperado.
+
+\subsubsection{Uso de Herencia}
+El código emplea herencia para reutilizar comportamientos comunes entre clases relacionadas. Esto permite que las clases derivadas extiendan la funcionalidad base sin reescribir código, lo cual mejora la cohesión del sistema. La herencia también actúa como fundamento para otras características, como el polimorfismo y la sobrescritura de métodos.
+
+\subsubsection{Polimorfismo}
+El polimorfismo se observa cuando múltiples clases comparten una misma interfaz de comportamiento, permitiendo que un mismo método invoque acciones diferentes dependiendo de la instancia concreta utilizada. Este mecanismo facilita que el programa sea expandible, pues nuevas clases pueden integrarse sin necesidad de modificar el código existente que trabaja sobre tipos más generales.
+
+\subsubsection{Sobrescritura de Métodos}
+En varias clases se emplea la sobrescritura para modificar o especializar el comportamiento definido en clases superiores. Esto permite que cada clase concreta implemente su propia versión de métodos compartidos, respetando la estructura de la superclase pero adaptándose a las necesidades particulares de cada entidad.
+
+\subsubsection{Encapsulamiento}
+El encapsulamiento está presente mediante el uso de atributos privados o protegidos, gestionados a través de métodos públicos. Esto evita la manipulación directa del estado interno de los objetos, garantizando mayor seguridad lógica y evitando inconsistencias. La gestión del estado mediante getters y setters también ayuda a centralizar la validación de datos.
+
+\subsubsection{Modularidad y Separación de Responsabilidades}
+Cada clase del código está diseñada para cumplir una responsabilidad específica, lo que sigue el principio \textit{Single Responsibility}. Esto permite localizar problemas y modificar componentes sin afectar al resto del sistema. El uso de archivos separados para cada módulo mejora la organización del proyecto.
+
+\subsubsection{Interacción entre Objetos}
+Las clases mantienen comunicación mediante composición y agregación; es decir, algunas clases contienen instancias de otras. Esto permite construir estructuras complejas a partir de componentes simples, promoviendo un diseño escalable y flexible.
+
+\subsubsection{Gestión de Flujo y Lógica de Negocio}
+La lógica del programa se distribuye de manera ordenada entre las clases, permitiendo que el flujo de ejecución sea claro. Se integran decisiones, operaciones y cálculos que responden al propósito del proyecto sin saturar las clases con tareas excesivas.
+
+\subsection{Diagramas UML}
+\begin{figure}[h]
+    \centering
+  \includegraphics[width=\textwidth]{capturas/clases.drawio (1).png}
+    \caption{Diagrama de clases}
+    \label{fig:miimagen}
+\end{figure}
+\clearpage
+
+\begin{figure}[h]
+    \centering
+  \includegraphics[width=\textwidth]{capturas/Diagrama dinamico main.PNG}
+    \caption{Diagrama de dinamico del main}
+    \label{fig:miimagen}
+\end{figure}
+\clearpage
+
+
+\subsection{Pruebas}
+\clearpage
+
+\section{Resultados} % - - - - - - - - - - - - section - - - - - - - - - - - -
+\clearpage
+
+\section{Conclusiones}
+El análisis realizado permitió identificar con claridad la estructura interna del programa y representar sus componentes mediante un diagrama UML estático, lo que evidencia las clases definidas, sus atributos, métodos y relaciones. Asimismo, el diagrama UML dinámico permitió describir el flujo de ejecución y la interacción entre objetos durante la operación de la aplicación. A partir de esta representación, fue posible interpretar con precisión los conceptos de programación orientada a objetos aplicados en el código dart.main aportado.
+
+El estudio del manejo de excepciones mostró su relevancia como mecanismo para mantener la estabilidad del programa ante situaciones no previstas durante la ejecución. La forma en que se implementaron dentro del código ejemplifica cómo el lenguaje Dart permite capturar y gestionar errores de forma controlada, garantizando un funcionamiento seguro y predecible. En conjunto, los resultados obtenidos confirman la importancia de emplear modelos UML y técnicas adecuadas de control de errores para desarrollar aplicaciones estructuradas, comprensibles y resistentes a fallos.
+\clearpage
+\printbibliography
+
+\end{document}
